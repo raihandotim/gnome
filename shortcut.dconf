@@ -1,0 +1,210 @@
+[org/gnome/Console]
+last-window-maximised=false
+last-window-size=(732, 528)
+
+[org/gnome/Showtime/State]
+is-maximized=false
+
+[org/gnome/control-center]
+last-panel='sound'
+window-state=(1020, 667, true)
+
+[org/gnome/desktop/a11y/applications]
+screen-keyboard-enabled=false
+screen-magnifier-enabled=false
+screen-reader-enabled=false
+
+[org/gnome/desktop/a11y/magnifier]
+mag-factor=8.0
+
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Logs.desktop', 'org.freedesktop.MalcontentControl.desktop', 'org.gnome.Sysprof.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.tweaks.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.Decibels.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Papers.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('ibus', 'ibus-avro'), ('xkb', 'us')]
+per-window=true
+show-all-sources=false
+sources=[('xkb', 'us'), ('ibus', 'ibus-avro')]
+xkb-options=@as []
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+show-battery-percentage=true
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['org-gnome-software', 'org-gnome-console', 'org-gnome-tweaks', 'gnome-power-panel', 'org-gnome-showtime', 'gnome-about-panel']
+
+[org/gnome/desktop/notifications/application/gnome-about-panel]
+application-id='gnome-about-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-console]
+application-id='org.gnome.Console.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-showtime]
+application-id='org.gnome.Showtime.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-tweaks]
+application-id='org.gnome.tweaks.desktop'
+
+[org/gnome/desktop/wm/keybindings]
+move-to-workspace-left=['<Alt><Super>period']
+move-to-workspace-right=['<Alt><Super>comma']
+panel-run-dialog=['<Super>r']
+switch-to-workspace-left=['<Super>comma']
+switch-to-workspace-right=['<Super>period']
+toggle-fullscreen=['<Alt>F11']
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu:minimize,maximize,close'
+resize-with-right-button=false
+
+[org/gnome/epiphany/state]
+is-maximized=false
+window-size=(1024, 736)
+
+[org/gnome/evolution-data-server]
+migrated=true
+
+[org/gnome/mutter]
+overlay-key='Super'
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=['<Alt><Super>h']
+toggle-tiled-right=['<Alt><Super>l']
+
+[org/gnome/mutter/wayland/keybindings]
+restore-shortcuts=@as []
+
+[org/gnome/nautilus/icon-view]
+default-zoom-level='small'
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+migrated-gtk-settings=true
+
+[org/gnome/nautilus/window-state]
+initial-size=(683, 736)
+maximized=true
+
+[org/gnome/settings-daemon/plugins/housekeeping]
+donation-reminder-last-shown=int64 1764111169270177
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']
+magnifier=['<Shift><Super>z']
+magnifier-zoom-in=['<Super>equal']
+magnifier-zoom-out=['<Super>minus']
+on-screen-keyboard=['<Shift><Super>k']
+screenreader=@as []
+screensaver=['<Super>Escape']
+search=['<Super>slash']
+volume-down=['<Shift><Super>F9']
+volume-mute=['<Shift><Super>F10']
+volume-up=['<Shift><Super>F11']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>t'
+command='xfce4-terminal'
+name='Terminal'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>e'
+command='nautilus'
+name='Files'
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>w'
+command='firefox'
+name='Firefox'
+
+[org/gnome/shell]
+enabled-extensions=['Vitals@CoreCoding.com']
+welcome-dialog-last-shown-version='49.2'
+
+[org/gnome/shell/extensions/vitals]
+hide-icons=false
+hide-zeros=false
+icon-style=1
+menu-centered=false
+show-battery=false
+show-processor=true
+show-storage=false
+show-system=true
+update-time=1
+
+[org/gnome/shell/keybindings]
+screenshot=['Print']
+show-screen-recording-ui=['<Shift><Alt>Print']
+show-screenshot-ui=['<Shift>Print']
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/software]
+check-timestamp=int64 1764059263
+first-run=false
+
+[org/gnome/terminal/legacy]
+theme-variant='dark'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(0,43,54)'
+cursor-blink-mode='on'
+cursor-shape='underline'
+foreground-color='rgb(131,148,150)'
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+text-blink-mode='focused'
+use-theme-colors=false
+
+[org/gnome/tweaks]
+show-extensions-notice=false
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=false
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.0, 0.16862745098039217, 0.21176470588235294, 1.0)]
+selected-color=(true, 0.0, 0.16862745098039217, 0.21176470588235294, 1.0)
+
+[sm/puri/Chatty]
+blur-idle-buddies=true
+clear-out-stuck-sms=false
+first-start=false
+indicate-unknown-contacts=true
+mam-enabled=true
+message-carbons=false
+purple-enabled=true
+render-attachments=true
+request-sms-delivery-reports=true
+return-sends-message=false
+send-receipts=false
+send-typing=false
+strip-url-tracking-id=false
