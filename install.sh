@@ -76,7 +76,7 @@ echo "root:$USERPASS" | chpasswd
 useradd -m -G wheel $USERNAME
 echo "$USERNAME:$USERPASS" | chpasswd
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
-chfn $FULLNAME $USERNAME
+chfn -f $FULLNAME $USERNAME
 
 
 # --- BOOTLOADER (UEFI) ---
@@ -97,19 +97,16 @@ su $USERNAME
 mkdir -p /home/$USERNAME/.config/kitty/
 echo "font_size 15" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "background_opacity 0.37" >> /home/$USERNAME/.config/kitty/kitty.conf
-echo "hide_window_decorations titlebar_only" >> /home/$USERNAME/.config/kitty/kitty.conf
+echo "hide_window_decorations titlebar-only" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "remember_window_size no" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_height 21c" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_width 91c" >> /home/$USERNAME/.config/kitty/kitty.conf
 chown -R $USERNAME:$USERNAME /home/$USERNAME/
 
-git clone https://github.com/raihandotim/gnome/
-#TO SAVE SETTINGS ---
-#dconf dump / > gnome_backup.ini
-dconf load / < gnome/gnome_backup.ini
+
 
 EOF
 umount -R /mnt
 
-echo "✅ Installation complete. Fish and Niri installed. GitHub Niri config copied to /home/$USERNAME/.config."
+echo "✅ Installation complete."
 echo "You may reboot now."
