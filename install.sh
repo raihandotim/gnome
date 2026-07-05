@@ -103,6 +103,13 @@ echo "initial_window_height 21c" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_width 91c" >> /home/$USERNAME/.config/kitty/kitty.conf
 chown -R $USERNAME:$USERNAME /home/$USERNAME/
 
+# SETTING UP YAY
+git clone https://aur.archlinux.org/yay /tmp/yay
+cd /tmp/yay
+makepkg -si --noconfirm
+cd ..
+rm -rf /tmp/yay
+
 
 
 EOF
