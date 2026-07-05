@@ -28,6 +28,8 @@ read -p "Enter ROOT partition (ex: /dev/sda2): " ROOTPART
 
 ### --- ASK FOR USERNAME & PASSWORD ---
 read -p "Enter new username: " USERNAME
+read -p "Enter full name: " FULLNAME
+
 while true; do
     read -s -p "Enter password for $USERNAME: " USERPASS
     echo
@@ -48,7 +50,7 @@ mkdir -p /mnt/boot
 mount $EFIPART /mnt/boot
 
 ### --- HTTPS MIRROR ---
-echo "Server = https://mirror.xeonbd.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+#echo "Server = https://mirror.xeonbd.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 
 ### --- BASE INSTALL
 pacstrap -K /mnt base base-devel linux linux-firmware linux-headers efibootmgr vim grub networkmanager gdm gnome gnome-extra firefox chromium gimp libreoffice-fresh bluez bluez-utils noto-fonts git vim gnome-tweaks ffmpeg vlc mpv extension-manager kitty mesa vulkan-intel intel-media-driver power-profiles-daemon sof-firmware htop
@@ -74,6 +76,8 @@ echo "root:$USERPASS" | chpasswd
 useradd -m -G wheel $USERNAME
 echo "$USERNAME:$USERPASS" | chpasswd
 sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/' /etc/sudoers
+chfn $FULLNAME $USERNAME
+
 
 # --- BOOTLOADER (UEFI) ---
 grub-install --efi-directory=/boot --bootloader-id=GRUB
@@ -83,6 +87,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable power-profiles-daemon
 systemctl enable bluetooth
+systemctl enable gdm
 
 
 
@@ -92,7 +97,7 @@ su $USERNAME
 mkdir -p /home/$USERNAME/.config/kitty/
 echo "font_size 15" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "background_opacity 0.37" >> /home/$USERNAME/.config/kitty/kitty.conf
-echo "hide_window_decoration yes" >> /home/$USERNAME/.config/kitty/kitty.conf
+echo "hide_window_decorations titlebar_only" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "remember_window_size no" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_height 21c" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_width 91c" >> /home/$USERNAME/.config/kitty/kitty.conf
