@@ -102,6 +102,12 @@ echo "remember_window_size no" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_height 21c" >> /home/$USERNAME/.config/kitty/kitty.conf
 echo "initial_window_width 91c" >> /home/$USERNAME/.config/kitty/kitty.conf
 chown -R $USERNAME:$USERNAME /home/$USERNAME/
+
+git clone https://github.com/raihandotim/gnome/
+#TO SAVE SETTINGS ---
+#dconf dump / > gnome_backup.ini
+dconf load / < gnome/gnome_backup.ini
+
 EOF
 umount -R /mnt
 
